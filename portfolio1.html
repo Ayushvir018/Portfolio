@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Gupta's Professional Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome for Icons (Professional look for skills and links) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom font import: Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Dark background for a professional look */
+            background-color: #0d1117; 
+            color: #c9d1d9; /* Light text color */
+        }
+        
+        /* Utility for focusing on sections */
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        /* Project Card Hover Effect */
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
+        }
+        
+        /* Primary accent color */
+        .text-primary { color: #58a6ff; }
+        .bg-primary { background-color: #58a6ff; }
+        .border-primary { border-color: #58a6ff; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-[#0d1117]/95 backdrop-blur-sm border-b border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-primary hover:text-white transition duration-300">
+                Ayush Gupta
+            </a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="text-gray-300 hover:text-primary transition duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-primary transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (SVG Icon) -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Toggle Mobile Menu">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+                <a href="#about" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition duration-300">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition duration-300">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- 1. Hero Section -->
+        <section id="hero" class="section-padding min-h-screen flex items-center pt-24">
+            <div class="text-center md:text-left">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4">
+                    Hi, I'm <span class="text-primary">Ayush Gupta</span>
+                </h1>
+                <p class="text-2xl sm:text-3xl lg:text-4xl text-gray-400 font-light mb-8">
+                    A <span class="font-semibold text-white">Machine Learning Enthusiast</span> & B.Tech Developer
+                </p>
+                <p class="max-w-3xl mx-auto md:mx-0 text-lg text-gray-400 mb-10">
+                    I'm currently channeling my development foundation in Android and Web technologies towards building intelligent systems using Machine Learning. I transform data into actionable insights and build seamless user experiences.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#projects" class="inline-block px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary hover:bg-blue-600 transition duration-300 shadow-lg shadow-blue-500/50">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="inline-block px-8 py-3 border border-primary text-base font-medium rounded-lg text-primary hover:bg-primary hover:text-white transition duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <section id="about" class="section-padding border-t border-gray-800">
+            <h2 class="text-4xl font-bold mb-10 text-center text-white">
+                About Me
+            </h2>
+            <div class="max-w-5xl mx-auto bg-[#161b22] p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center md:items-start md:space-x-8">
+                
+                <!-- Profile Image Placeholder (Replace with your professional photo) -->
+                <div class="flex-shrink-0 mb-6 md:mb-0">
+                    <img src="https://placehold.co/150x150/58a6ff/0d1117?text=Ayush" 
+                         alt="Ayush Gupta Profile Placeholder" 
+                         class="rounded-full w-36 h-36 object-cover mx-auto md:mx-0 border-4 border-primary shadow-lg"
+                         onerror="this.onerror=null; this.src='https://placehold.co/150x150/58a6ff/0d1117?text=Profile'">
+                </div>
+                
+                <div class="md:flex-grow text-center md:text-left">
+                    <p class="text-lg mb-6 leading-relaxed text-gray-300">
+                        I am a B.Tech student at KIET Group of Institutions. My initial foundation was built in Web and Android Development, where I gained hands-on experience creating functional and user-friendly applications.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        I have since developed a deep passion for Machine Learning. I am currently dedicated to mastering ML workflows, from data preprocessing and model training with frameworks like TensorFlow to deploying practical AI solutions. I aim to merge my development expertise with my ML knowledge to build impactful, smart applications.
+                    </p>
+                    <div class="mt-8 pt-6 border-t border-gray-700">
+                        <p class="text-xl font-semibold text-primary">Key Focus Areas:</p>
+                        <ul class="mt-4 space-y-2 text-gray-300 list-disc list-inside">
+                            <li>Applying Deep Learning models to real-world datasets.</li>
+                            <li>Developing Full-Stack applications** with intelligent backend features.</li>
+                            <li>Strengthening skills in Data Structures and Algorithms for robust solutions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Achievement Highlights -->
+<section class="py-12 border-t border-gray-800">
+    <div class="max-w-4xl mx-auto bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 text-center space-y-4">
+        
+        <h3 class="text-3xl font-bold text-primary">
+            🏆 Smart India Hackathon (SIH) 2025 – Runner-Up (2nd Rank)
+        </h3>
+        <p class="text-lg text-gray-300">
+            National-level finalist, secured <span class="text-white font-semibold">2nd Rank</span> for delivering an
+            innovative AI & IoT–based real-world solution under competitive conditions.
+        </p>
+
+        <div class="border-t border-gray-700 pt-4"></div>
+
+        <h3 class="text-2xl font-bold text-primary">
+            🚀 Grand Innovation Hackathon (GIH) – Finalist
+        </h3>
+        <p class="text-lg text-gray-300">
+            Selected as a finalist for proposing and developing a high-impact,
+            technology-driven solution evaluated on innovation and feasibility.
+        </p>
+
+    </div>
+</section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="section-padding border-t border-gray-800">
+            <h2 class="text-4xl font-bold mb-10 text-center text-white">
+                Technical Toolkit
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Machine Learning & Data -->
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary hover:shadow-lg hover:shadow-blue-500/20">
+                        <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">Python</span>
+                        <p class="text-sm text-gray-400 mt-1">Primary ML Language</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fas fa-brain text-4xl text-red-500 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">TensorFlow / PyTorch</span>
+                        <p class="text-sm text-gray-400 mt-1">ML Frameworks</p>
+                    </div>
+                    <!-- Mobile Development -->
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fab fa-android text-4xl text-green-500 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">Android (Java/Kotlin)</span>
+                        <p class="text-sm text-gray-400 mt-1">Mobile Development</p>
+                    </div>
+                    <!-- Web Development -->
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fas fa-code text-4xl text-orange-500 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">HTML / CSS / JS</span>
+                        <p class="text-sm text-gray-400 mt-1">Core Web Technologies</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fab fa-react text-4xl text-blue-400 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">React / Node.js</span>
+                        <p class="text-sm text-gray-400 mt-1">Web Frameworks</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fas fa-database text-4xl text-yellow-600 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">SQL / MongoDB</span>
+                        <p class="text-sm text-gray-400 mt-1">Databases</p>
+                    </div>
+                    <!-- Tools & Concepts -->
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fab fa-github-alt text-4xl text-gray-400 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">Git / GitHub</span>
+                        <p class="text-sm text-gray-400 mt-1">Version Control</p>
+                    </div>
+                    <div class="p-4 rounded-lg bg-[#161b22] border border-gray-700 text-center transition duration-300 hover:border-primary">
+                        <i class="fas fa-sort-numeric-up-alt text-4xl text-purple-400 mb-2"></i>
+                        <span class="text-xl font-semibold text-white block">Data Structures & Algo.</span>
+                        <p class="text-sm text-gray-400 mt-1">Problem Solving</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Projects Section (Updated – ONLY Your Projects) -->
+<section id="projects" class="section-padding border-t border-gray-800">
+    <h2 class="text-4xl font-bold mb-10 text-center text-white">
+        Featured Projects
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Project 1: IoT Rockfall Prediction -->
+        <div class="project-card bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 transition duration-300">
+            <h3 class="text-2xl font-semibold text-primary mb-3">
+                IoT-Based Rockfall Prediction & Safety System
+            </h3>
+            <p class="text-gray-400 mb-4">
+                Developed an ML-driven early warning system to predict rockfall risks using geological parameters
+                such as slope angle, crack data, displacement, and vibration sensor readings. Implemented
+                ensemble models like Random Forest and XGBoost for real-time, interpretable predictions.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-900 text-blue-300">Machine Learning</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-green-900 text-green-300">IoT Sensors</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-yellow-900 text-yellow-300">Random Forest</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-red-900 text-red-300">XGBoost</span>
+            </div>
+        </div>
+
+        <!-- Project 2: ML Medicine Maker -->
+        <div class="project-card bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 transition duration-300">
+            <h3 class="text-2xl font-semibold text-primary mb-3">
+                ML-Based Medicine Detection & Automated Medicine Maker
+            </h3>
+            <p class="text-gray-400 mb-4">
+                Built a machine learning system capable of detecting medicines and assisting in automated
+                medicine formulation. The project focuses on accurate classification, dosage validation,
+                and reducing human error in medicine preparation.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-900 text-blue-300">Machine Learning</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-green-900 text-green-300">Healthcare AI</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900 text-purple-300">Automation</span>
+            </div>
+        </div>
+
+        <!-- Project 3: AI Waste Reuse -->
+        <div class="project-card bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 transition duration-300">
+            <h3 class="text-2xl font-semibold text-primary mb-3">
+                AI-Based Waste Reuse & Segregation System
+            </h3>
+            <p class="text-gray-400 mb-4">
+                Designed an AI-assisted machinery workflow to automatically segregate waste into reusable,
+                recyclable, and discard categories. The system helps factories reduce dumping costs and
+                enables value recovery through intelligent material classification.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-green-900 text-green-300">Sustainability</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-900 text-blue-300">AI Classification</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-yellow-900 text-yellow-300">Industrial Automation</span>
+            </div>
+        </div>
+        <!-- Project 5: AI-Based Automated Car -->
+<div class="project-card bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 transition duration-300">
+    <h3 class="text-2xl font-semibold text-primary mb-3">
+        AI-Based Automated Car (Hotspot Controlled)
+    </h3>
+    <p class="text-gray-400 mb-4">
+        Built an AI-enabled automated car controlled via a hotspot-based wireless network.
+        Implemented real-time command handling and automation logic to enable smooth vehicle
+        movement and decision flow without manual intervention.
+    </p>
+    <div class="flex flex-wrap gap-2">
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-900 text-blue-300">AI & Automation</span>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-green-900 text-green-300">IoT</span>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-yellow-900 text-yellow-300">Wireless Networking</span>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900 text-purple-300">Embedded Systems</span>
+    </div>
+</div>
+
+
+        <!-- Project 4: FindMyScholar -->
+        <div class="project-card bg-[#161b22] p-6 rounded-xl shadow-xl border border-gray-700 transition duration-300">
+            <h3 class="text-2xl font-semibold text-primary mb-3">
+                FindMyScholar – AI Scholarship Recommendation Platform
+            </h3>
+            <p class="text-gray-400 mb-4">
+                Developed an AI-powered platform that recommends personalized scholarships to students
+                based on academic profile, eligibility criteria, and financial background, improving
+                accessibility to educational opportunities.
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-blue-900 text-blue-300">Recommendation System</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-purple-900 text-purple-300">EdTech</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-full bg-green-900 text-green-300">Machine Learning</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="section-padding border-t border-gray-800">
+            <h2 class="text-4xl font-bold mb-10 text-center text-white">
+                Get In Touch
+            </h2>
+            <div class="max-w-xl mx-auto bg-[#161b22] p-8 rounded-xl shadow-2xl">
+                <p class="text-lg text-center text-gray-400 mb-6">
+                    Have a project in mind or want to talk tech? Send me a message!
+                </p>
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 bg-[#0d1117] border border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 bg-[#0d1117] border border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-white placeholder-gray-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-2 bg-[#0d1117] border border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-white placeholder-gray-500"></textarea>
+                    </div>
+                    <button type="submit" id="submit-button"
+                            class="w-full px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#161b22]">
+                        Send Message
+                    </button>
+                </form>
+                <p id="form-message" class="mt-4 text-center text-sm font-medium hidden"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 border-t border-gray-800 py-6 text-center text-gray-500">
+        <p>&copy; 2025 Ayush Gupta. Built with HTML & Tailwind CSS.</p>
+        <div class="mt-2 space-x-6 flex justify-center text-xl">
+            <!-- LinkedIn Icon Link -->
+            <a href="https://www.linkedin.com/in/ayush-gupta-49334b327" target="_blank" class="hover:text-primary transition duration-300" aria-label="LinkedIn Profile">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <!-- GitHub Icon Link -->
+            <a href="https://github.com/" target="_blank" class="hover:text-primary transition duration-300" aria-label="GitHub Profile">
+                <i class="fab fa-github"></i>
+            </a>
+            <!-- Email Icon Link -->
+            <a href="mailto:ag7654641@gmail.com" class="hover:text-primary transition duration-300" aria-label="Email Ayush Gupta">
+                <i class="fas fa-envelope"></i>
+            </a> 
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- 1. Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                // Close menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // --- 2. Contact Form Submission (Placeholder) ---
+            const form = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            const submitButton = document.getElementById('submit-button');
+
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // Display loading state
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    submitButton.classList.add('opacity-50');
+
+                    // Simulate API call delay (replace this with your actual form submission logic,
+                    // e.g., using a service like Formspree or an AWS Lambda endpoint)
+                    setTimeout(() => {
+                        const name = document.getElementById('name').value;
+                        
+                        formMessage.textContent = `Thank you, ${name}! Your message has been received. I'll be in touch soon.`;
+                        formMessage.classList.remove('hidden', 'text-red-400');
+                        formMessage.classList.add('text-green-400');
+                        
+                        // Reset form state
+                        submitButton.textContent = 'Send Message';
+                        submitButton.disabled = false;
+                        submitButton.classList.remove('opacity-50');
+                        form.reset();
+
+                    }, 2000); // 2 second simulated delay
+                });
+            }
+        });
+    </script>
+</body>
+</html>
